@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    image: maven:3.8.4-openjdk-17-slim
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      - JAVA_OPTS=-Dspring.devtools.restart.enabled=true -Dspring.devtools.livereload.enabled=true
+    command: mvn spring-boot:run
