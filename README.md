@@ -16,4 +16,4 @@ docker-compose up -d
 docker-compose exec app mvn spring-boot:run
 ```
 
-- Acesse `localhost:8080`
+- Acesse `localhost:8080/filmes`
